@@ -1,6 +1,6 @@
-#Tax Calculator Assignment 
-##by Fyle for internship Role
-##Visit the live site on:  https://tax-calculator-fyle-subham0kumar.netlify.app/
+# Tax Calculator Assignment 
+## by Fyle for internship Role
+## Visit the live site on:  https://tax-calculator-fyle-subham0kumar.netlify.app/
 
 This Web application is built using vanilla javascript that is HTML , CSS and Javascript only.
 In this application one can enter the gross income, extra income, age group and tax deductible amount to get the overall income that after deduction of the taxes.
