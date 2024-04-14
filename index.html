@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <h1>Tax Calculator</h1>
+      <div class="form-container">
+        <form id="form">
+          <!-- annual income input-field -->
+          <div class="annual-income-field">
+            <span class="label-field">
+              <label for="annual-income" class="label-tag">
+                Enter Gross Annual Income
+              </label>
+              <span class="hint-span">
+                <div class="hint-icon">?</div>
+                <div>
+                  <p class="hint-msg">
+                    Gross annual income is your total salary in a year before
+                    any deductions.
+                  </p>
+                </div>
+              </span>
+            </span>
+            <span class="input-span">
+              <input
+                type="text"
+                name="Annual Income"
+                id="annual-income"
+                class="input-field"
+                autocomplete="off"
+              />
+              <span class="hint-span" id="ann-x-claim">
+                <div class="hint-icon">!</div>
+                <p class="hint-msg">Please Enter Numbers only</p>
+              </span>
+            </span>
+          </div>
+
+          <!-- Extra income input-field -->
+          <div class="extra-income-field">
+            <span class="label-field">
+              <label for="extra-income" class="label-tag">
+                Enter Extra Income
+              </label>
+              <span class="hint-span">
+                <div class="hint-icon">?</div>
+                <div>
+                  <p class="hint-msg">
+                    Extra income is the earning that is not included in your
+                    salary.
+                  </p>
+                </div>
+              </span>
+            </span>
+            <span class="input-span">
+              <input
+                type="text"
+                name="Extra Income"
+                id="extra-income"
+                class="input-field"
+                autocomplete="off"
+              />
+              <span class="hint-span" id="extra-x-claim">
+                <div class="hint-icon">!</div>
+                <p class="hint-msg">Please Enter Numbers only</p>
+              </span>
+            </span>
+          </div>
+
+          <!-- Age group select-field -->
+          <div class="age-group-field">
+            <span class="label-field">
+              <label for="age-group" class="label-tag">Enter Age Group</label>
+              <span class="hint-span">
+                <div class="hint-icon">?</div>
+                <div>
+                  <p class="hint-msg">
+                    Range in which your age lies, tax percentage will be
+                    assigned accordingly.
+                  </p>
+                </div>
+              </span>
+            </span>
+            <span class="input-span">
+              <select name="Age Group" id="age-group" class="input-field">
+                <option selected hidden value="0">
+                  -- select an option --
+                </option>
+                <option value="1"><p><40</p></option>
+                <option value="2"><p>>=40 and <60</p></option>
+                <option value="3"><p>>60</p></option>
+              </select>
+              <span class="hint-span" id="age-x-claim">
+                <div class="hint-icon">!</div>
+                <p class="hint-msg">Please Select one of the options</p>
+              </span>
+            </span>
+          </div>
+
+          <!-- deduction income input-field -->
+          <div class="deduction-income-field">
+            <span class="label-field">
+              <label for="deduction-income" class="label-tag">
+                Enter Total Applicable Deductions
+              </label>
+              <span class="hint-span">
+                <div class="hint-icon">?</div>
+                <div>
+                  <p class="hint-msg">
+                    Amount that is eligible for deduction from the salary, like
+                    insurance, etc.
+                  </p>
+                </div>
+              </span>
+            </span>
+            <span class="input-span">
+              <input
+                type="text"
+                name="Deductions"
+                id="deduction-income"
+                class="input-field"
+                autocomplete="off"
+              />
+              <span class="hint-span" id="deduction-x-claim">
+                <div class="hint-icon">!</div>
+                <p class="hint-msg">Please Enter Numbers only</p>
+              </span>
+            </span>
+          </div>
+
+          <!-- Submit button -->
+          <div class="btn-div">
+            <button class="btn submit-btn">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div class="result-container">
+        <span class="rslt">
+          <h2>Your overall Income will be</h2>
+          <h2 id="result">00</h2>
+          <h4>after tax deduction of</h4>
+          <h3 id="taxAmt">No Tax</h3>
+          <button class="btn" id="close-btn">Close</button>
+        </span>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
